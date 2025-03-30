@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página inicial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #222;
+            padding: 15px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        nav a:hover {
+            background-color: #f4a261;
+            color: #fff;
+            border-radius: 20px;
+        }
+        .carousel-container {
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .carousel-inner .carousel-item {
+            height: 400px;
+        }
+        .carousel-inner .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+        .teste {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            padding: 20px;
+        }
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 14px;
+            margin-top: auto;
+        }
+        .quadradopai {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+        .quadrado {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-align: left;
+            background-color: #fff;
+            padding: 40px;
+            width: 90%;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .texto {
+            flex: 1;
+            min-width: 280px;
+        }
+        .imagem1 {
+            flex: 1;
+            max-width: 100%;
+            text-align: center;
+        }
+        .imagem1 img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+        }
+        .imagem1 img:hover{
+            border: 2px solid black;
+            transform: scale(1.10);
+        }
+        @media (max-width: 768px) {
+            .quadrado {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px;
+            }
+            .carousel-inner .carousel-item {
+                height: 250px;
+            }
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav a {
+                padding: 8px 15px;
+            }
+        }
+        .h1show {
+        text-align: center;
+        color: #222;
+    }
+
+    #grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+        gap: 10px;
+        padding: 20px;
+        background-color: white;
+        border-radius: 10px;
+        color: black;
+        text-align: center;
+        width: 100%;
+        max-width: 55%;
+ 
+    }
+
+    .grid-item {
+        font-size: 18px;
+        padding: 15px;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+    .grid-header {
+        background-color: #222;
+        color: white;
+    }
+        .conteiner{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+#ouvir {
+    height: 40px;
+    width: 25%;
+    border-radius: 25px; 
+    background-color: #f4a261;
+    color: black; 
+    font-size: 16px; 
+    font-weight: bold; 
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+}
+#ouvir:hover {
+    color: white; 
+    background-color: #e29a5e; 
+    transform: scale(1.05); 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+    border: 2px solid #e29a5e; 
+}
+.album {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 100px;
+}
+.album > div {
+     margin: 20px;
+     font-size: 20px;
+     width: 200px;
+     height: 200px;
+     transform: scale(1.10);
+     margin-top: 60px;
+     padding: 10px;
+    }
+.albumtext{
+    align-items: center;
+    text-align: center;
+    margin-top: 80px;
+}
+.album > div:hover{
+    transform: scale(1.10);
+    border: 2px solid #f4f4f4;
+    border-radius: 10px;
+}
+.styled-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    .styled-table th, .styled-table td {
+        padding: 15px;
+        text-align: center;
+        border: 1px solid #ddd;
+    }
+
+    .styled-table th {
+        background-color: #333;
+        color: white;
+        font-weight: bold;
+    }
+
+    .styled-table tr:nth-child() {
+        background-color: #f4f4f4;
+    }
+
+    .styled-table tr:hover {
+        background-color: black;
+        color: white;
+        cursor: pointer;
+    }
+    .informacoes {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.informacoes h2 {
+    font-family: 'Varela Round', sans-serif;
+    color: #222;
+    border-bottom: 2px solid #222;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+
+.informacoes ol, .informacoes ul {
+    margin-left: 20px;
+    padding-left: 0;
+}
+
+
+.informacoes ol li, .informacoes ul li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+
+.informacoes ol {
+    list-style-type: decimal;
+}
+.shadowbox{
+  padding: 30px;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="paginaInicial.html">Home</a>
+            <a href="paginapop.html">Pop</a>
+            <a href="paginarock.html">Rock</a>
+            <a href="paginaJaz.html">Jazz</a>
+            <a href="paginaMpb.html">MPB</a>
+        </nav>
+    </header>
+    <div class="teste">
+        <div class="theRock">
+            <div class="carousel-container">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <a href="paginapop.html" target="_blank">
+                                <img class="d-block w-100" src="https://www.maroon5br.com/site/wp-content/uploads/2021/06/Maroon5-Biografia-Overexposed-608x380.jpg" alt="First slide">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="quadradopai">
+        <div class="quadrado">
+            <div class="texto">
+                <h2>Marron 5</h2>
+                <p>Maroon 5 é uma banda pop-rock formada em Los Angeles em 2001, inicialmente conhecida como Kara's Flowers. Com Adam Levine como vocalista, a banda alcançou fama mundial com sucessos como "This Love", "She Will Be Loved" e "Moves Like Jagger".</p>
+                <p>Sua música mistura pop, rock, funk e R&B, conquistando uma vasta base de fãs e ganhando diversos prêmios, incluindo Grammys. Ao longo dos anos, Maroon 5 se consolidou como uma das bandas mais influentes e populares da música contemporânea</p>
+                <a href="https://open.spotify.com/intl-pt/track/2iuZJX9X9P0GKaE93xcPjk?si=34c1cee7ceb14da2" id="ouvir">Ouvir Agora</a>
+            </div>
+            <div class="imagem1">  
+                <img src="https://cenariominas.com.br/wp-content/uploads/2023/09/1001665876-maroon-5.jpg" alt="Imagem de um artista musical">
+            </div>
+        </div>
+    </div>
+    <div>
+        <h1 class="h1show">Grade de Shows - Maroon 5</h1>
+        <div class="conteiner">
+            <div id="grid">
+                <div class="grid-item grid-header">Local</div>
+                <div class="grid-item grid-header">Cidade</div>
+                <div class="grid-item grid-header">Data</div>
+                
+                <div class="grid-item">Madison Square Garden</div>
+                <div class="grid-item">Nova York</div>
+                <div class="grid-item">10/06/2023</div>
+                
+                <div class="grid-item">O2 Arena</div>
+                <div class="grid-item">Londres</div>
+                <div class="grid-item">15/08/2023</div>
+                
+                <div class="grid-item">Staples Center</div>
+                <div class="grid-item">Los Angeles</div>
+                <div class="grid-item">25/09/2023</div>
+                
+                <div class="grid-item">Allianz Parque</div>
+                <div class="grid-item">São Paulo</div>
+                <div class="grid-item">30/11/2023</div>
+                
+                <div class="grid-item">Tokyo Dome</div>
+                <div class="grid-item">Tóquio</div>
+                <div class="grid-item">05/12/2023</div>
+            </div>
+        </div>
+    </div>
+    <div class="albumtext">
+        <h1>Albuns Marron 5</h1>
+        <div class="album">
+            <div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8NdtKqCsodg-nw7PXIhtAOFvA1CEfvqr-sg&s" alt="Imagem de um artista musical" alt="Album 1" style="width: 100%; border-radius: 10px;">
+                <p style="text-align: center; font-weight: bold;">V (2014)</p>
+            </div>
+            <div>
+                <img src="https://i.discogs.com/tEI_HtjTAB5TiPa5bn-jkQA4iLQF6Stc4SLygjcnIbQ/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIxNjI2/MjE1LTE2NDE0Nzcx/MzktNDQ1OC5qcGVn.jpeg" alt="Album 2" style="width: 100%; border-radius: 10px;">
+                <p style="text-align: center; margin-top: 10px; font-weight: bold;">jordi (2021)</p>
+            </div>
+            <div>
+                <img src="https://i.scdn.co/image/ab67616d0000b27317b3850d758fff5a2301e537" alt="Album 3" style="width: 100%; border-radius: 10px;">
+                <p style="text-align: center; margin-top: 10px; font-weight: bold;">Song About Jane (2002)</p>
+            </div>
+            <div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHk6Wk8a1hy8sqD77aYXtdXKiGOrQwQZ2Jrg&s" alt="Album 4" style="width: 100%; border-radius: 10px;">
+                <p style="text-align: center; margin-top: 10px; font-weight: bold;">overexposed (2012)</p>
+            </div>
+            <div>
+                <img src="https://upload.wikimedia.org/wikipedia/pt/3/3e/Maroon_5_Red_Pill_Blues.jpg" alt="Album 5" style="width: 100%; border-radius: 10px;">
+                <p style="text-align: center; margin-top: 10px; font-weight: bold;">Red Pill Blue (2017)</p>
+            </div>
+            <div>
+                <img src="https://i.scdn.co/image/ab67616d0000b273db6cce3721e5dd279a8d1226" alt="Album 6" style="width: 100%; border-radius: 10px;">
+                <p style="text-align: center; margin-top: 10px; font-weight: bold;">will be loved (2024)</p>
+            </div>
+            <div>
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/37/The_Fourth_World_Cover.jpg/220px-The_Fourth_World_Cover.jpg" alt="Album 7" style="width: 100%; border-radius: 10px;">
+                <p style="text-align: center; margin-top: 10px; font-weight: bold;">the fourth world (1997)</p>
+            </div>
+            <div>
+                <img src="https://upload.wikimedia.org/wikipedia/en/9/9b/Maroon_5_-_It_Won%27t_Be_Soon_Before_Long.png" alt="Album 8" style="width: 100%; border-radius: 10px;">
+                <p style="text-align: center; margin-top: 10px; font-weight: bold;">It Won't Be Soon Before Long (2007)</p>
+            </div>
+        </div>
+        <div class="informacoes">
+            <h2>Álbuns ou Músicas Preferidas do Maroon 5</h2>
+            <ol>
+                <li>"Songs About Jane" (2002)</li>
+                <li>"Sugar" (2014)</li>
+                <li>"Memories" (2019)</li>
+            </ol>
+        
+            <h2>Curiosidades sobre o Maroon 5</h2>
+            <ul>
+                <li>A banda surgiu inicialmente como "Kara’s Flowers" nos anos 1990, antes de adotar o nome Maroon 5 e alcançar o sucesso.</li>
+                <li>Adam Levine, vocalista da banda, também atuou como jurado no programa *The Voice*, contribuindo para a popularização do grupo.</li>
+                <li>Maroon 5 mistura pop, rock e R&B em seu estilo musical, sendo uma das bandas mais bem-sucedidas do século XXI, com inúmeros hits globais.</li>
+            </ul>
+        </div>
+
+
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>Nome do disco</th>
+                    <th>Ano do lançamento</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>V</td>
+                    <td>2014</td>
+                </tr>
+                <tr>
+                    <td>Jordi</td>
+                    <td>2021</td>
+                </tr>
+                <tr>
+                    <td>Song About Jane</td>
+                    <td>2002</td>
+                </tr>
+                <tr>
+                    <td>Overexposed</td>
+                    <td>2012</td>
+                </tr>
+                <tr>
+                    <td>It Won't Be Soon Before Long</td>
+                    <td>2007</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="shadowbox">
+        <div class="container mt-5">
+            <!-- Menu Dropdown -->
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                    Gêneros Musicais
+                </button>
+    
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <!-- Submenu para Rock -->
+                    <li><hr class="dropdown-divider"></li>
+                    <li><h6 class="dropdown-header">Rock</h6></li>
+                    <li><a class="dropdown-item" href="paginarock.html">Queen</a></li>
+     
+    
+                    <!-- Submenu para Pop -->
+                    <li><hr class="dropdown-divider"></li>
+                    <li><h6 class="dropdown-header" href="paginapop.html">Pop</h6></li>
+                    <li><a class="dropdown-item" href="paginapop.html">Maroon 5</a></li>
+    
+    
+                    <!-- Submenu para Jazz -->
+                    <li><hr class="dropdown-divider"></li>
+                    <li><h6 class="dropdown-header">Jazz</h6></li>
+                    <li><a class="dropdown-item" href="paginaJaz.html">louis Armstrong</a></li>
+     
+    
+                    <!-- Submenu para MPB -->
+                    <li><hr class="dropdown-divider"></li>
+                    <li><h6 class="dropdown-header">MPB</h6></li>
+                    <li><a class="dropdown-item" href="paginaMpb.html">Mamonas Assasinas</a></li>
+    
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Música para Todos</p>
+        <p>Engenharia de software 1A</p>
+        <p>Gabriel Brietzig,Miguel Loureiro,Tiago Dalzoto</p>
+    </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

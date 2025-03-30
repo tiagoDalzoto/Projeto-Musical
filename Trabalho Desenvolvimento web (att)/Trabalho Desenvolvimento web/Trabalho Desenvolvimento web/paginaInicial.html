@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página inicial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 120vh;
+        }
+        header {
+            background-color: #222;
+            padding: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            font-size: 18px;
+        }
+        nav a:hover {
+            background-color: #f4a261;
+            color: #fff;
+            border-radius: 20px;
+        }
+        .carousel-container {
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .carousel-inner .carousel-item {
+            height: 500px;
+        }
+        .carousel-inner .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+        .teste {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 70px;
+            font-size: 14px;
+        }
+        .quadradopai {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70vh;
+            width: 100%;
+        }
+        .quadrado {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: #fff;
+            padding: 30px;
+            width: 80%;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .quadrado h2 {
+            font-family: 'Varela Round', sans-serif;
+            color: #333;
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+        .quadrado p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+        }
+        .musica-lista {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            max-width: 1200px;
+            align-items: center;
+        }
+        .genero {
+            background-color: #222;
+            color: #ecf0f1;
+            padding: 15px;
+            border-left: 5px solid #222;
+            border-radius: 5px;
+            font-size: 1.2em;
+            font-weight: bold;
+            width: 250px;
+        }
+        .genero ul {
+            list-style-type: none;
+            padding: 10px 0 0 0;
+            margin: 0;
+        }
+        .artista {
+            color: #f4a261;
+            padding: 5px 0;
+            transition: all 0.3s ease;
+        }
+        .artista:hover {
+            color: #f4a261;
+            border-bottom: 1px solid #f4a261;
+        }
+        .conteiner{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="paginaInicial.html">Home</a>
+            <a href="paginapop.html">Pop</a>
+            <a href="paginarock.html">Rock</a>
+            <a href="paginaJaz.html">Jazz</a>
+            <a href="paginaMpb.html">MPB</a>
+        </nav>
+    </header>
+    <div class="teste">
+        <div class="theRock">
+            <div class="carousel-container">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <a href="paginapop.html" target="_blank">
+                                <img class="d-block w-100" src="https://img.jagranjosh.com/images/2024/October/30102024/Who-Are-Maroon-5.webp" alt="First slide">
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="paginaJaz.html" target="_blank">
+                                <img class="d-block w-100" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Louis_Armstrong_in_Color_%28restored%29.jpg/800px-Louis_Armstrong_in_Color_%28restored%29.jpg" alt="Second slide">
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="paginarock.html" target="_blank">
+                                <img class="d-block w-100" src="https://www.hellen.design/wp-content/uploads/2018/11/blog-historia-logotipo-banda-queen-1024x683.jpg" alt="Third slide">
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="paginaMpb.html" target="_blank">
+                                <img class="d-block w-100" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiO89uxjzPa4qxc35C2BD1HwdVe5koBQG4cChLK3W3azo-PQmSd2N3nmrQmVj9pD7AtoQWjS1902vldlvWkmX9kmFaYUUSwsyEDcnoqXmDPY3QkdWT5E-23J-M2ScQCB6jQs4uL_Ag8uV_owPmt8VDxDcVn9L0vDiDialk0WWaAuXzwOqouDkeJJDilI1M/s4000/Mamonas%20O%20Legado%20nova%202%20-%20divulga%C3%A7%C3%A3o.jpg" alt="Fourth slide">
+                            </a>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="quadradopai">
+       <div class="quadrado">
+        <h2>Bem-vindo à página de pagode, samba, funk e rock!</h2>
+        <p>A plataforma que conecta você ao melhor da música! Com diversas bandas de diversos gêneros musicais, uma verdadeira mistura de influências e estilos. Explore nossos artistas favoritos e descubra novos sons que vão tocar sua alma.</p>
+        <p>Se você é fã de rock, samba, funk, jazz ou qualquer outro estilo, aqui temos uma seleção especial de músicas, vídeos e artigos sobre os maiores ícones da música mundial. Fique à vontade para navegar, curtir e se apaixonar por novas músicas.</p>
+        <p>Além disso, sempre estamos atualizando nosso conteúdo com novidades, então não perca a chance de aproveitar o melhor do entretenimento musical! Nos acompanhe e viva a experiência musical de uma forma única!</p>
+        </div> 
+    </div>
+
+    <div class="conteiner">
+    <div class="musica-lista">
+        <div class="genero">
+            Rock
+            <ul>
+                <li class="artista">Queen</li>
+                <li class="artista">Led Zeppelin</li>
+                <li class="artista">The Beatles</li>
+                <li class="artista">The Rolling Stones</li>
+            </ul>
+        </div>
+        <div class="genero">
+            Pop
+            <ul>
+                <li class="artista">Michael Jackson</li>
+                <li class="artista">Madonna</li>
+                <li class="artista">Taylor Swift</li>
+                <li class="artista">Beyoncé</li>
+            </ul>
+        </div>
+        <div class="genero">
+            Jazz
+            <ul>
+                <li class="artista">Louis Armstrong</li>
+                <li class="artista">Miles Davis</li>
+                <li class="artista">John Coltrane</li>
+                <li class="artista">Ella Fitzgerald</li>
+            </ul>
+        </div>
+        <div class="genero">
+            MPB
+            <ul>
+                <li class="artista">Caetano Veloso</li>
+                <li class="artista">Chico Buarque</li>
+                <li class="artista">Elis Regina</li>
+                <li class="artista">Gilberto Gil</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<footer>
+    <p>&copy; 2024 Música para Todos</p>
+    <p>Engenharia de software 1A</p>
+    <p>Gabriel Brietzig,Miguel Loureiro,Tiago Dalzoto</p>
+</footer>
+</body>
+</html>
